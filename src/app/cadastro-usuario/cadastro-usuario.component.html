@@ -1,1 +1,48 @@
-<p>cadastro-usuario works!</p>
+<div class="container">
+    
+    <div class="title-brand">
+        <h1>ECOMMERCE</h1>
+    </div>
+
+    <div class="form-box">
+        <div class="form-items">
+            <h2>Faça seu cadastro!</h2>
+            <mat-form-field appearence="fill">
+                <mat-label>Nome completo</mat-label>
+                <input matInput type="text" placeholder="Ex. Exemplo do exemplinho">
+            </mat-form-field>
+            <mat-form-field appearence="fill">
+                <mat-label>Apelido</mat-label>
+                <input matInput type="text" placeholder="Ex. Exemplinho">
+            </mat-form-field>
+            <mat-form-field appearence="fill">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" placeholder="Ex. email@gmail.com">
+            </mat-form-field>
+            <mat-form-field appearence="fill">
+                <mat-label>Senha</mat-label>
+                <input matInput type="password" placeholder="**********">
+            </mat-form-field>
+
+            <div class="group-items">
+                <mat-form-field appearance="fill">
+                    <mat-label>Sexo</mat-label>
+                    <mat-select>
+                      <mat-option value="Masculino">Masculino</mat-option>
+                      <mat-option value="Feminino">Feminino</mat-option>
+                      <mat-option value="Nenhum">Não quero dizer</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill">
+                    <mat-label>Data de Nascimento</mat-label>
+                    <input matInput type="date" [matDatepicker]="picker">
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            
+        </div>
+        <button mat-raised-button color="primary">Cadastrar</button>
+    </div>
+
+</div>
