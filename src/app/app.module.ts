@@ -29,7 +29,7 @@ import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.co
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

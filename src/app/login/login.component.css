@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.container h1 {
+    margin: auto 0;
+    font-size: 80px;
+    color: #6B7AC7;
+    font-weight: bold;
+}
+
+.container-login {
+    width: 500px;
+    height: 450px;
+    background-color: #E1E3F9;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+
+.container-login h1 {
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    color: #6B7AC7;
+}
+
+.container-login .inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    height: 35%;
+}
+
+.container-login .inputs input {
+    margin-top: 15px;
+}
+
+.container-login mat-label {
+    font-size: 20px;
+}
+
+.container-login .inputs button {
+    margin-top: 40px;
+    background-color: #6B71C7;
+    color: white;
+    font-weight: bold;
+}
+
+.container-login a {
+    font-size: 18px;
+    color: #6B71C7;
+    margin-top: 5px;
+}
+
+.container-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.container-inputs #cadastrar {
+    background-color: #6B71C7;
+    color: white;
+    font-weight: bold;
+    width: 400px;
+    margin: 40px auto;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+@media screen and (max-width:1007px) {
+    .container h1 {
+        margin-bottom: 100px;
+    }
+}
