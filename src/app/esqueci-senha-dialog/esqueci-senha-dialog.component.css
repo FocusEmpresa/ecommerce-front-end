@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.container mat-label {
+    font-size: 17px;
+}
+
+.container input {
+    font-size: 17px;
+}

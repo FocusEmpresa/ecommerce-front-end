@@ -58,6 +58,8 @@
     font-size: 18px;
     color: #6B71C7;
     margin-top: 5px;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .container-inputs {

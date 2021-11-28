@@ -6,11 +6,13 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { EsqueciSenhaDialogComponent } from './esqueci-senha-dialog/esqueci-senha-dialog.component';
 
 
 
@@ -18,7 +20,8 @@ import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.co
   declarations: [
     AppComponent,
     LoginComponent,
-    CadastroUsuarioComponent
+    CadastroUsuarioComponent,
+    EsqueciSenhaDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.co
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
+    MatDialogModule
 
   ],
   providers: [],
