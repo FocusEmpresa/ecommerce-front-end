@@ -6,11 +6,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -18,7 +21,8 @@ import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.co
   declarations: [
     AppComponent,
     LoginComponent,
-    CadastroUsuarioComponent
+    CadastroUsuarioComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,8 @@ import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.co
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
 
   ],
   providers: [],
