@@ -36,7 +36,7 @@
     flex-direction: column;
     justify-content: center;
     width: 80%;
-    height: 35%;
+    height: 40%;
 }
 
 .container-login .inputs input {
@@ -44,7 +44,7 @@
 }
 
 .container-login mat-label {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .container-login .inputs button {
