@@ -7,12 +7,15 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { EsqueciSenhaDialogComponent } from './esqueci-senha-dialog/esqueci-senha-dialog.component';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -21,7 +24,8 @@ import { EsqueciSenhaDialogComponent } from './esqueci-senha-dialog/esqueci-senh
     AppComponent,
     LoginComponent,
     CadastroUsuarioComponent,
-    EsqueciSenhaDialogComponent
+    EsqueciSenhaDialogComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,9 @@ import { EsqueciSenhaDialogComponent } from './esqueci-senha-dialog/esqueci-senh
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatToolbarModule,
+    MatIconModule,
 
   ],
   providers: [],
