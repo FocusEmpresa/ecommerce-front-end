@@ -26,13 +26,14 @@
 .form-box {
     width: 40%;
     max-width: 550px;
-    font-size: 15px;
+    font-size: 17px;
     color: #6B7AC7;
     background-color: #E1E3F9;
     margin: auto auto;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    border-radius: 20px;
 }
 
 .form-items {
@@ -46,7 +47,7 @@ mat-form-field {
 }
 
 .group-items mat-form-field {
-    width: 30%;
+    width: 32%;
 }
 
 .group-items{
