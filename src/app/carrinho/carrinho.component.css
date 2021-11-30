@@ -2,8 +2,19 @@ mat-stepper {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width: 80%;
+    max-width: 85%;
     margin: auto;
+}
+
+.containerCarrinho {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.container-left {
+    width: 70%;
 }
 
 .container-endereco-superior {
@@ -12,6 +23,7 @@ mat-stepper {
 
 .container-endereco-superior h1 {
     margin-left: 10px;
+    font-weight: bold;
 }
 
 #endereco-infos h3 {
@@ -31,4 +43,123 @@ mat-stepper {
     text-decoration: none;
     color: gray;
     font-weight: bold;
+    cursor: pointer;
+}
+
+#items button {
+    border: solid 2px red;
+    background-color: transparent !important;
+    color: red;
+    height: 50px;
+    margin: auto 0;
+}
+
+.produto-h1 {
+    display: flex;
+}
+
+.produto-h1 h1 {
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.container-items-superior {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.container-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.item-infos,
+.item-quantidade,
+.item-preco {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-preco {
+    margin: auto 0;
+}
+
+.item-infos p,
+.item-quantidade p,
+.item-preco p {
+    font-size: 16px;
+}
+
+.item-quantidade {
+    display: flex;
+    justify-content: center;
+}
+
+.item-img img {
+    width: 100px;
+    height: 100px;
+}
+
+.item-preco h1 {
+    color: #6B7AC7;
+    font-weight: bold;
+}
+
+.resumo-superior {
+    display: flex;
+}
+
+.resumo-superior h1 {
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.valor-produto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.valor-produto p {
+    font-size: 20px;
+    color: gray;
+    margin: auto 0;
+}
+
+.valor-produto h1 {
+    font-weight: bold;
+    margin: auto 10px;
+    color: #6B7AC7;
+}
+
+.valor-produto-single {
+    display: flex;
+}
+
+.resumo button {
+    border: solid 2px #6B7AC7;
+    color: #6B7AC7;
+    font-weight: bold;
+}
+
+.pagar-button {
+    margin-top: 15px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1257px) {
+    .container-left {
+        width: 100%;
+    }
+    .containerCarrinho {
+        justify-content: center;
+    }
+    .resumo {
+        margin-top: 50px;
+        width: 350px;
+    }
 }
