@@ -10,6 +10,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatCardModule} from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,6 +45,8 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
+    MatStepperModule,
+    MatCardModule,
 
   ],
   providers: [],

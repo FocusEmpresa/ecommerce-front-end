@@ -1,0 +1,69 @@
+<mat-stepper>
+    <mat-step label="Carrinho" state="carrinho" id="carrinho">
+        <mat-card>
+            <div class="container-endereco-superior">
+                <mat-icon>edit_location</mat-icon>
+                <h1>
+                    SELECIONE O ENDEREÇO
+                </h1>
+            </div>
+            <mat-card id="endereco-infos">
+                <h3>Endereço principal</h3>
+                <h4>Rua das ameixas</h4>
+                <h4>Numero 444, Frente</h4>
+                <h4>CEP: 7070707070 - Florianópolis, Santa Catarina</h4>
+                <div class="endereco-buttons">
+                    <a href="#">EDITAR</a>
+                    <a href="#">SELECIONAR TUDO</a>
+                    <a style="color: #3f51b5;" href="#">NOVO ENDEREÇO</a>
+                </div>
+            </mat-card>
+        </mat-card>
+
+        <!-- end endereco -->
+
+        <mat-card id="items">
+            <div class="container-endereco-superior">
+                <mat-icon>edit_location</mat-icon>
+                <h1>
+                    PRODUTO E FRETE
+                </h1>
+            </div>
+        </mat-card>
+
+        <div>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <!-- End carrinho -->
+
+
+
+    <mat-step label="Pagamento" state="chat">
+        <p>Socialize with each other.</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+
+    <!-- end pagamento -->
+
+
+
+    <mat-step label="Confirmação">
+        <p>You're welcome.</p>
+    </mat-step>
+
+
+
+    <!-- end confirmação -->
+
+    <!-- Icon overrides. -->
+    <ng-template matStepperIcon="carrinho">
+        <mat-icon>add_shopping_cart</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="chat">
+        <mat-icon>add_shopping_cart</mat-icon>
+    </ng-template>
+</mat-stepper>
