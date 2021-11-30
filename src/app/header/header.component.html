@@ -5,6 +5,19 @@
     <span class="spacer"></span>
     <ul>
         <li>
+            <button mat-button [matMenuTriggerFor]="menu">Menu Administrativo</button>
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item>Adicionar Produto</button>
+            <button mat-menu-item>Lista de Produtos</button>
+            <button mat-menu-item>Lista de vendas</button>
+            </mat-menu>
+        </li>
+        <li>
+            <button mat-icon-button routerLinkActive="active-route" routerLink="/carrinho">
+                <mat-icon>add_shopping_cart</mat-icon>
+            </button>
+        </li>
+        <li>
             <a mat-button routerLinkActive="active-route" routerLink="/login">Login</a>/<a mat-button routerLinkActive="active-route" routerLink="/cadastrar">Cadastrar</a>
         </li>
     </ul>
