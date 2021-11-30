@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { EsqueciSenhaDialogComponent } from './esqueci-senha-dialog/esqueci-senha-dialog.component';
 import { HeaderComponent } from './header/header.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 
 
@@ -25,7 +26,8 @@ import { HeaderComponent } from './header/header.component';
     LoginComponent,
     CadastroUsuarioComponent,
     EsqueciSenhaDialogComponent,
-    HeaderComponent
+    HeaderComponent,
+    CarrinhoComponent
   ],
   imports: [
     BrowserModule,
