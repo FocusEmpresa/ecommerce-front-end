@@ -90,9 +90,62 @@
 
 
     <mat-step label="Pagamento" state="chat">
-        <p>Socialize with each other.</p>
+        <ng-template matStepLabel>Pagamento</ng-template>
+        <mat-stepper orientation="vertical">
+            <mat-step>
+                <ng-template matStepLabel>PIX</ng-template>
+                <ng-template matStepContent>
+
+
+                </ng-template>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>BOLETO BANCARIO</ng-template>
+                <ng-template matStepContent>
+
+
+
+                </ng-template>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>CARTAO DE CREDITO</ng-template>
+                <mat-card class="cartao-inputs">
+                    <h1>DADOS DO CARTÃO</h1>
+                    <mat-form-field style="width: 350px;" appearence="fill">
+                        <mat-label>Nome impresso no cartão</mat-label>
+                        <input matInput type="text" placeholder="Ex. Exemplo de exemplo">
+                    </mat-form-field>
+                    <mat-form-field appearence="fill" style="width: 250px;">
+                        <mat-label>Numero do cartão</mat-label>
+                        <input matInput type="text" placeholder="Ex. 5646 9876 4659 7865">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Validade</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field style="width: 280px;" appearence="fill">
+                        <mat-label>Codigo de verificação (CVV)</mat-label>
+                        <input matInput type="text" placeholder="Ex. 333">
+                    </mat-form-field>
+                    <mat-form-field style="width: 350px;" appearence="fill">
+                        <mat-label>CPF do titular do cartão</mat-label>
+                        <input matInput type="text" placeholder="Ex. 987 654 654 65">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Data de vencimento</mat-label>
+                        <input matInput [matDatepicker]="dp">
+                        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                        <mat-datepicker #dp></mat-datepicker>
+                    </mat-form-field>
+
+                </mat-card>
+
+
+            </mat-step>
+        </mat-stepper>
         <div>
-            <button mat-button matStepperPrevious>Back</button>
             <button mat-button matStepperNext>Next</button>
         </div>
     </mat-step>
