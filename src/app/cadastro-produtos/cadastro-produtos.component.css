@@ -1,0 +1,15 @@
+.width {
+    width: 85%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+.example-mid-width {
+    width: 30%;
+    min-width: 150px;
+    margin: 0 20px;
+}
+
+mat-form-field, button {
+    width: 80%;
+}
