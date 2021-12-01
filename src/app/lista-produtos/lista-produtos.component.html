@@ -10,13 +10,13 @@
         </ng-container>
 
         <ng-container matColumnDef="Preço">
-            <th mat-header-cell *matHeaderCellDef> Name </th>
-            <td mat-cell *matCellDef="let row"> {{row.preco}} </td>
+            <th mat-header-cell *matHeaderCellDef> Preço </th>
+            <td mat-cell *matCellDef="let row">R$ {{row.preco}} </td>
         </ng-container>
 
         <ng-container matColumnDef="Max_parcelas">
-            <th mat-header-cell *matHeaderCellDef> Preço </th>
-            <td mat-cell *matCellDef="let row">R$ {{row.max_parcelas}} </td>
+            <th mat-header-cell *matHeaderCellDef> Máximo parcelas </th>
+            <td mat-cell *matCellDef="let row">{{row.max_parcelas}} </td>
         </ng-container>
 
         <ng-container matColumnDef="Ações">
