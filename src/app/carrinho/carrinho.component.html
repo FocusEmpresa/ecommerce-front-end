@@ -16,7 +16,7 @@
                         <h4>CEP: 7070707070 - Florianópolis, Santa Catarina</h4>
                         <div class="endereco-buttons">
                             <a>EDITAR</a>
-                            <a>SELECIONAR TUDO</a>
+                            <a>SELECIONAR OUTRO</a>
                             <a style="color: #3f51b5;">NOVO ENDEREÇO</a>
                         </div>
                     </mat-card>
@@ -45,7 +45,7 @@
                         <div class="item-quantidade">
                             <mat-form-field class="example-full-width" appearance="fill">
                                 <mat-label>Quantidade</mat-label>
-                                <input matInput type="number" placeholder="Ex. 1" value="1">
+                                <input type="number" matInput placeholder="Ex. 1" value="1">
                                 <!-- Trocar input -->
                             </mat-form-field>
                             <button mat-raised-button color="warn"><mat-icon>restore_from_trash</mat-icon>REMOVER</button>
@@ -89,11 +89,69 @@
 
 
 
-    <mat-step label="Pagamento" state="chat">
-        <p>Socialize with each other.</p>
-        <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
+    <ng-template matStepperIcon="edit" matStepLabel>
+        <mat-icon>attach_money</mat-icon>
+    </ng-template>
+    <mat-step label="Pagamento" state="home">
+        <ng-template matStepLabel>Pagamento</ng-template>
+
+        <mat-stepper orientation="vertical">
+            <mat-step>
+                <ng-template matStepLabel>BOLETO BANCARIO</ng-template>
+                <mat-card class="cartao-inputs">
+                    <h1>DADOS DO PESSOAIS</h1>
+                    <mat-form-field style="width: 350px;" appearence="fill">
+                        <mat-label>Nome completo</mat-label>
+                        <input matInput type="text" placeholder="Ex. Exemplo de exemplo">
+                    </mat-form-field>
+                    <mat-form-field appearence="fill" style="width: 250px;">
+                        <mat-label>CPF</mat-label>
+                        <input matInput type="text" placeholder="Ex. 130.955.955-78">
+                    </mat-form-field>
+
+                </mat-card>
+            </mat-step>
+
+            <mat-step>
+                <ng-template matStepLabel>CARTAO DE CREDITO</ng-template>
+                <mat-card class="cartao-inputs">
+                    <h1>DADOS DO CARTÃO</h1>
+                    <mat-form-field style="width: 350px;" appearence="fill">
+                        <mat-label>Nome impresso no cartão</mat-label>
+                        <input matInput type="text" placeholder="Ex. Exemplo de exemplo">
+                    </mat-form-field>
+                    <mat-form-field appearence="fill" style="width: 250px;">
+                        <mat-label>Numero do cartão</mat-label>
+                        <input matInput type="text" placeholder="Ex. 5646 9876 4659 7865">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Validade</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field style="width: 220px;" appearence="fill">
+                        <mat-label>Codigo de verificação (CVV)</mat-label>
+                        <input matInput type="text" placeholder="Ex. 333">
+                    </mat-form-field>
+                    <mat-form-field style="width: 350px;" appearence="fill">
+                        <mat-label>CPF do titular do cartão</mat-label>
+                        <input matInput type="text" placeholder="Ex. 987 654 654 65">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Data de vencimento</mat-label>
+                        <input matInput [matDatepicker]="dp">
+                        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                        <mat-datepicker #dp></mat-datepicker>
+                    </mat-form-field>
+
+                </mat-card>
+
+
+            </mat-step>
+        </mat-stepper>
+        <div class="resumo" id="confirmar-pagamento">
+            <button mat-button matStepperNext mat-raised-button>CONFIRMAR</button>
         </div>
     </mat-step>
 
@@ -102,7 +160,58 @@
 
 
     <mat-step label="Confirmação">
-        <p>You're welcome.</p>
+        <div class="container-endereco-superior">
+            <h1 style="margin-top: 50px;">
+                ENDEREÇO
+            </h1>
+        </div>
+        <mat-card>
+            <mat-card id="endereco-infos">
+                <h4>Rua das ameixas</h4>
+                <h4>Numero 444, Frente</h4>
+                <h4>CEP: 7070707070 - Florianópolis, Santa Catarina</h4>
+            </mat-card>
+        </mat-card>
+
+        <div class="container-endereco-superior">
+            <h1 style="margin-top: 50px;">
+                PAGAMENTO
+            </h1>
+        </div>
+        <mat-card id="endereco-infos">
+            <h4>Nº Cartao: **** **** **** 8778</h4>
+            <h4>Parcelas: 1x</h4>
+            <h4>Valor total: R$3.190,00</h4>
+        </mat-card>
+
+        <div class="container-endereco-superior">
+            <h1 style="margin-top: 50px;">
+                ITEMS
+            </h1>
+        </div>
+        <mat-card class="container-item">
+            <div class="item-img">
+                <img src="https://shopinfo.vteximg.com.br/arquivos/ids/1271287-1000-1000/1.png?v=637720027613330000" alt="">
+            </div>
+            <div class="item-infos">
+                <h2>Computador gamer FORTREK</h2>
+                <p>Com desconto de 10% a vista no cartão de credito.</p>
+            </div>
+            <div class="item-quantidade">
+                <p>1</p>
+            </div>
+            <div class="item-preco">
+                <p>Preço a vista no cartao:</p>
+                <h1>R$ 3.190</h1>
+            </div>
+        </mat-card>
+
+
+        <div class="resumo" id="finalizar">
+            <button mat-raised-button>FINALIZAR</button>
+        </div>
+
+
     </mat-step>
 
 
