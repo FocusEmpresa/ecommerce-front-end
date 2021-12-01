@@ -1,0 +1,15 @@
+h2 {
+    text-align: center;
+}
+.color-confirm {
+    background-color: rgb(24, 192, 33);
+    color: white;
+}
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.buttons button {
+    width: 100px;
+}

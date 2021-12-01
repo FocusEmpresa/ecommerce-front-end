@@ -11,7 +11,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
-import {MatStepperModule} from '@angular/material/stepper';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +24,9 @@ import { EsqueciSenhaDialogComponent } from './esqueci-senha-dialog/esqueci-senh
 import { HeaderComponent } from './header/header.component';
 import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ListaProdutosComponent } from './lista-produtos/lista-produtos.component';
+import { EditarProdutoDialogComponent } from './editar-produto-dialog/editar-produto-dialog.component';
+import { DeleteProdutoDialogComponent } from './delete-produto-dialog/delete-produto-dialog.component';
 
 
 
@@ -34,6 +39,9 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     HeaderComponent,
     CadastroProdutosComponent,
     CarrinhoComponent,
+    ListaProdutosComponent,
+    EditarProdutoDialogComponent,
+    DeleteProdutoDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +58,9 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     MatMenuModule,
     MatStepperModule,
     MatCardModule,
-
+    MatTableModule,
+    MatPaginatorModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,5 @@
-<mat-card class="width">
-    <div class="title">
-        <mat-icon class="down">add_circle</mat-icon><h2> Adicionar Novo Produto</h2>
-    </div>
+<div class="container">
+    <h2>Alterar produto</h2>
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Link de foto do produto</mat-label>
         <input matInput placeholder="Ex. Pizza">
@@ -22,5 +20,8 @@
         <mat-label>Descrição do produto</mat-label>
         <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
     </mat-form-field>
-    <button mat-raised-button color="primary">Cadastrar produto</button>
-</mat-card>
+    <div class="buttons">
+        <button mat-raised-button color="warn" (click)="close()">Cancelar</button>
+        <button mat-raised-button class="color-confirm" (click)="editar()">Editar</button>
+    </div>
+</div>
