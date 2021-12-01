@@ -184,3 +184,14 @@ mat-stepper {
 .cartao-inputs mat-form-field mat-label {
     font-size: 16px;
 }
+
+#confirmar-pagamento {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#confirmar-pagamento button {
+    width: 250px;
+    height: 45px;
+}

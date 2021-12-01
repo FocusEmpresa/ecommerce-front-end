@@ -89,24 +89,29 @@
 
 
 
-    <mat-step label="Pagamento" state="chat">
+    <ng-template matStepperIcon="edit" matStepLabel>
+        <mat-icon>attach_money</mat-icon>
+    </ng-template>
+    <mat-step label="Pagamento" state="home">
         <ng-template matStepLabel>Pagamento</ng-template>
+
         <mat-stepper orientation="vertical">
             <mat-step>
-                <ng-template matStepLabel>PIX</ng-template>
-                <ng-template matStepContent>
-
-
-                </ng-template>
-            </mat-step>
-            <mat-step>
                 <ng-template matStepLabel>BOLETO BANCARIO</ng-template>
-                <ng-template matStepContent>
+                <mat-card class="cartao-inputs">
+                    <h1>DADOS DO PESSOAIS</h1>
+                    <mat-form-field style="width: 350px;" appearence="fill">
+                        <mat-label>Nome completo</mat-label>
+                        <input matInput type="text" placeholder="Ex. Exemplo de exemplo">
+                    </mat-form-field>
+                    <mat-form-field appearence="fill" style="width: 250px;">
+                        <mat-label>CPF</mat-label>
+                        <input matInput type="text" placeholder="Ex. 130.955.955-78">
+                    </mat-form-field>
 
-
-
-                </ng-template>
+                </mat-card>
             </mat-step>
+
             <mat-step>
                 <ng-template matStepLabel>CARTAO DE CREDITO</ng-template>
                 <mat-card class="cartao-inputs">
@@ -125,7 +130,7 @@
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
                     </mat-form-field>
-                    <mat-form-field style="width: 280px;" appearence="fill">
+                    <mat-form-field style="width: 220px;" appearence="fill">
                         <mat-label>Codigo de verificação (CVV)</mat-label>
                         <input matInput type="text" placeholder="Ex. 333">
                     </mat-form-field>
@@ -145,8 +150,8 @@
 
             </mat-step>
         </mat-stepper>
-        <div>
-            <button mat-button matStepperNext>Next</button>
+        <div class="resumo" id="confirmar-pagamento">
+            <button mat-button matStepperNext mat-raised-button>CONFIRMAR</button>
         </div>
     </mat-step>
 
