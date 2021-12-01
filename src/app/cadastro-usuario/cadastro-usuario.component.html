@@ -1,5 +1,5 @@
 <div class="container">
-    
+
     <div class="title-brand">
         <h1>ECOMMERCE</h1>
     </div>
@@ -28,19 +28,20 @@
                 <mat-form-field appearance="fill">
                     <mat-label>Sexo</mat-label>
                     <mat-select>
-                      <mat-option value="Masculino">Masculino</mat-option>
-                      <mat-option value="Feminino">Feminino</mat-option>
-                      <mat-option value="Nenhum">Não quero dizer</mat-option>
+                        <mat-option value="Masculino">Masculino</mat-option>
+                        <mat-option value="Feminino">Feminino</mat-option>
+                        <mat-option value="Nenhum">Não quero dizer</mat-option>
                     </mat-select>
-                  </mat-form-field>
+                </mat-form-field>
 
-                  <mat-form-field appearance="fill">
-                    <mat-label>Data de Nascimento</mat-label>
-                    <input matInput type="date" [matDatepicker]="picker">
+                <mat-form-field appearance="fill">
+                    <mat-label>Data de nascimento</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
-                  </mat-form-field>
+                </mat-form-field>
             </div>
-            
+
         </div>
         <button mat-raised-button color="primary">Cadastrar</button>
     </div>

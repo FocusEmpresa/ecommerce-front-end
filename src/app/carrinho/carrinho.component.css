@@ -204,3 +204,13 @@ mat-stepper {
 #finalizar button {
     width: 400px;
 }
+
+#teste {
+    width: 200px;
+}
+
+@media screen and (max-width:1253px) {
+    .cartao-inputs {
+        width: 95%;
+    }
+}
