@@ -11,6 +11,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
+import {MatStepperModule} from '@angular/material/stepper';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,7 @@ import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.co
 import { EsqueciSenhaDialogComponent } from './esqueci-senha-dialog/esqueci-senha-dialog.component';
 import { HeaderComponent } from './header/header.component';
 import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 
 
@@ -29,7 +32,8 @@ import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos
     CadastroUsuarioComponent,
     EsqueciSenhaDialogComponent,
     HeaderComponent,
-    CadastroProdutosComponent
+    CadastroProdutosComponent,
+    CarrinhoComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +48,7 @@ import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
+    MatStepperModule,
     MatCardModule,
 
   ],

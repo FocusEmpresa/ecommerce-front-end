@@ -1,0 +1,119 @@
+<mat-stepper>
+    <mat-step label="Carrinho" state="carrinho">
+        <div class="containerCarrinho">
+            <div class="container-left">
+                <mat-card>
+                    <div class="container-endereco-superior">
+                        <mat-icon>edit_location</mat-icon>
+                        <h1>
+                            SELECIONE O ENDEREÇO
+                        </h1>
+                    </div>
+                    <mat-card id="endereco-infos">
+                        <h3>Endereço principal</h3>
+                        <h4>Rua das ameixas</h4>
+                        <h4>Numero 444, Frente</h4>
+                        <h4>CEP: 7070707070 - Florianópolis, Santa Catarina</h4>
+                        <div class="endereco-buttons">
+                            <a>EDITAR</a>
+                            <a>SELECIONAR TUDO</a>
+                            <a style="color: #3f51b5;">NOVO ENDEREÇO</a>
+                        </div>
+                    </mat-card>
+                </mat-card>
+
+                <!-- end endereco -->
+
+                <mat-card id="items">
+                    <div class="container-items-superior">
+                        <div class="produto-h1">
+                            <mat-icon>add_shopping_cart</mat-icon>
+                            <h1>
+                                PRODUTO E FRETE
+                            </h1>
+                        </div>
+                        <button mat-raised-button color="warn"><mat-icon>restore_from_trash</mat-icon>REMOVER TODOS OS PRODUTOS</button>
+                    </div>
+                    <mat-card class="container-item">
+                        <div class="item-img">
+                            <img src="https://shopinfo.vteximg.com.br/arquivos/ids/1271287-1000-1000/1.png?v=637720027613330000" alt="">
+                        </div>
+                        <div class="item-infos">
+                            <h2>Computador gamer FORTREK</h2>
+                            <p>Com desconto de 10% a vista no cartão de credito.</p>
+                        </div>
+                        <div class="item-quantidade">
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>Quantidade</mat-label>
+                                <input matInput placeholder="Ex. 1" value="1">
+                                <!-- Trocar input -->
+                            </mat-form-field>
+                            <button mat-raised-button color="warn"><mat-icon>restore_from_trash</mat-icon>REMOVER</button>
+                        </div>
+                        <div class="item-preco">
+                            <p>Preço a vista no cartao:</p>
+                            <h1>R$ 3.190</h1>
+                        </div>
+                    </mat-card>
+                </mat-card>
+            </div>
+            <!-- end items -->
+            <div class="container-rigth">
+                <mat-card class="resumo">
+                    <div class="resumo-superior">
+                        <mat-icon>format_list_bulleted</mat-icon>
+                        <h1>
+                            RESUMO
+                        </h1>
+                    </div>
+                    <div class="valor-produto">
+                        <div class="valor-produto-single">
+                            <p>Valor do produto:</p>
+                            <h1>R$ 3.190</h1>
+                        </div>
+                        <hr>
+                        <div class="valor-produto-single">
+                            <p>Valor do frete:</p>
+                            <h1>R$ 16.00</h1>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="pagar-button">
+                        <button mat-button matStepperNext mat-raised-button>IR PARA O PAGAMENTO</button>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </mat-step>
+    <!-- End carrinho -->
+
+
+
+    <mat-step label="Pagamento" state="chat">
+        <p>Socialize with each other.</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+
+    <!-- end pagamento -->
+
+
+
+    <mat-step label="Confirmação">
+        <p>You're welcome.</p>
+    </mat-step>
+
+
+
+    <!-- end confirmação -->
+
+    <!-- Icon overrides. -->
+    <ng-template matStepperIcon="carrinho">
+        <mat-icon>add_shopping_cart</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="chat">
+        <mat-icon>add_shopping_cart</mat-icon>
+    </ng-template>
+</mat-stepper>
