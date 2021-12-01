@@ -1,0 +1,39 @@
+.title {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.width {
+    width: 85%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.flex-end {
+    width: 100px;
+    text-align: center;
+}
+
+.color-button {
+    color: rgb(54, 122, 54);
+}
+
+.width-full {
+    width: 100%;
+}
+
+.valor-total {
+    width: 100px;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.name-usuario {
+    color: black;
+}
+
+.codigo {
+    font-weight: bold;
+}

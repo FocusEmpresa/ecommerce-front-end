@@ -4,6 +4,7 @@ import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ListaProdutosComponent } from './lista-produtos/lista-produtos.component';
+import { ListaVendasComponent } from './lista-vendas/lista-vendas.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'cadastrar', component: CadastroUsuarioComponent },
   { path: 'admin/cadastro-produto', component: CadastroProdutosComponent },
   { path: 'admin/lista-produtos', component: ListaProdutosComponent },
+  { path: 'admin/lista-vendas', component: ListaVendasComponent },
   { path: 'carrinho', component: CarrinhoComponent },
 ];
 

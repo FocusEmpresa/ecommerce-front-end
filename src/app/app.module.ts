@@ -14,6 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +28,7 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ListaProdutosComponent } from './lista-produtos/lista-produtos.component';
 import { EditarProdutoDialogComponent } from './editar-produto-dialog/editar-produto-dialog.component';
 import { DeleteProdutoDialogComponent } from './delete-produto-dialog/delete-produto-dialog.component';
+import { ListaVendasComponent } from './lista-vendas/lista-vendas.component';
 
 
 
@@ -42,6 +44,7 @@ import { DeleteProdutoDialogComponent } from './delete-produto-dialog/delete-pro
     ListaProdutosComponent,
     EditarProdutoDialogComponent,
     DeleteProdutoDialogComponent,
+    ListaVendasComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,7 @@ import { DeleteProdutoDialogComponent } from './delete-produto-dialog/delete-pro
     MatCardModule,
     MatTableModule,
     MatPaginatorModule,
+    MatExpansionModule,
     
   ],
   providers: [],
