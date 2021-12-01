@@ -160,7 +160,58 @@
 
 
     <mat-step label="Confirmação">
-        <p>You're welcome.</p>
+        <div class="container-endereco-superior">
+            <h1 style="margin-top: 50px;">
+                ENDEREÇO
+            </h1>
+        </div>
+        <mat-card>
+            <mat-card id="endereco-infos">
+                <h4>Rua das ameixas</h4>
+                <h4>Numero 444, Frente</h4>
+                <h4>CEP: 7070707070 - Florianópolis, Santa Catarina</h4>
+            </mat-card>
+        </mat-card>
+
+        <div class="container-endereco-superior">
+            <h1 style="margin-top: 50px;">
+                PAGAMENTO
+            </h1>
+        </div>
+        <mat-card id="endereco-infos">
+            <h4>Nº Cartao: **** **** **** 8778</h4>
+            <h4>Parcelas: 1x</h4>
+            <h4>Valor total: R$3.190,00</h4>
+        </mat-card>
+
+        <div class="container-endereco-superior">
+            <h1 style="margin-top: 50px;">
+                ITEMS
+            </h1>
+        </div>
+        <mat-card class="container-item">
+            <div class="item-img">
+                <img src="https://shopinfo.vteximg.com.br/arquivos/ids/1271287-1000-1000/1.png?v=637720027613330000" alt="">
+            </div>
+            <div class="item-infos">
+                <h2>Computador gamer FORTREK</h2>
+                <p>Com desconto de 10% a vista no cartão de credito.</p>
+            </div>
+            <div class="item-quantidade">
+                <p>1</p>
+            </div>
+            <div class="item-preco">
+                <p>Preço a vista no cartao:</p>
+                <h1>R$ 3.190</h1>
+            </div>
+        </mat-card>
+
+
+        <div class="resumo" id="finalizar">
+            <button mat-raised-button>FINALIZAR</button>
+        </div>
+
+
     </mat-step>
 
 

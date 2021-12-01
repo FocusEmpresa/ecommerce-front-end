@@ -191,7 +191,16 @@ mat-stepper {
     justify-content: center;
 }
 
-#confirmar-pagamento button {
-    width: 250px;
-    height: 45px;
+#confirmar-pagamento h1 {
+    margin-bottom: 100px !important;
+}
+
+#finalizar {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#finalizar button {
+    width: 400px;
 }
