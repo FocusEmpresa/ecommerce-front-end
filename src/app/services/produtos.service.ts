@@ -13,4 +13,8 @@ export class ProdutosService {
     return this.http.get(`${environment.apiUrl}/products`)
   }
 
+  createProduct(data: any) {
+    return this.http.post(`${environment.apiUrl}/products`, data)
+  }
+
 }

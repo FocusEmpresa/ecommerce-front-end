@@ -13,19 +13,7 @@ import { ProdutosService } from '../../services/produtos.service';
 export class ListaProdutosComponent implements OnInit {
 
   displayedColumns: string[] = ['Produto', 'Preço', 'Max_parcelas', 'Ações'];
-  dataSource = [
-    {produto: 'Mouse gamer', preco: '25,00', max_parcelas: 4, descricao: 'blablabla'},
-    {produto: 'Mouse gamer', preco: '25,00', max_parcelas: 4, descricao: 'blablabla'},
-    {produto: 'Mouse gamer', preco: '25,00', max_parcelas: 4, descricao: 'blablabla'},
-    {produto: 'Mouse gamer', preco: '25,00', max_parcelas: 4, descricao: 'blablabla'},
-    {produto: 'Mouse gamer', preco: '25,00', max_parcelas: 4, descricao: 'blablabla'},
-    {produto: 'Mouse gamer', preco: '25,00', max_parcelas: 4, descricao: 'blablabla'},
-    {produto: 'Mouse gamer', preco: '25,00', max_parcelas: 4, descricao: 'blablabla'},
-  ];
-
-  products: ProductDTO = {
-    name: ''
-  }
+  products: ProductDTO[] | any;
 
   constructor(
     public dialog: MatDialog,
@@ -38,13 +26,12 @@ export class ListaProdutosComponent implements OnInit {
   }
 
   async findAllProducts() {
-    await this.produtoService.getAllProducts().subscribe(resp => {
-      this.products = resp
-      console.log(this.products)
+    this.produtoService.getAllProducts().subscribe(resp => {
+      this.products = resp;
     })
   }
 
-  openDialogEdit() {
+  openDialogEdit(data: any) {
     const dialogRef = this.dialog.open(EditarProdutoDialogComponent, {
       width: '600px'
     });
@@ -54,7 +41,7 @@ export class ListaProdutosComponent implements OnInit {
     });
   }
   
-  openDialogDelete() {
+  openDialogDelete(idProduct: string) {
     const dialogRef = this.dialog.open(DeleteProdutoDialogComponent, {
       width: '400px'
     });
