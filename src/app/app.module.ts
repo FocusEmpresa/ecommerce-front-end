@@ -16,6 +16,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -67,6 +68,7 @@ import { ListaVendasComponent } from '../app/components/lista-vendas/lista-venda
     MatExpansionModule,
     HttpClientModule,
     FormsModule,
+    MatSnackBarModule,
     
   ],
   providers: [],

@@ -21,3 +21,11 @@ mat-form-field, button {
     display: flex;
     justify-content: center;
 }
+::ng-deep .mat-snack-bar-container {
+    color: rgb(255, 255, 255);
+    background: #1dc22b;
+}
+::ng-deep .mat-snack-bar-container button{
+    color: rgba(255, 255, 255, 0.815);
+    background: #19be26;
+}

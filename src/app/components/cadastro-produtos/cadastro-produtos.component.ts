@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ProductDTO } from 'src/app/dtos/products/product.dto';
 import { ProdutosService } from 'src/app/services/produtos.service';
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-cadastro-produtos',
@@ -8,6 +9,9 @@ import { ProdutosService } from 'src/app/services/produtos.service';
   styleUrls: ['./cadastro-produtos.component.css']
 })
 export class CadastroProdutosComponent implements OnInit {
+
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   product: ProductDTO = {
     product: '',
@@ -19,6 +23,7 @@ export class CadastroProdutosComponent implements OnInit {
 
   constructor(
     private produtoService: ProdutosService,
+    private _snackBar: MatSnackBar,
   ) { }
 
   ngOnInit(): void {
@@ -26,11 +31,30 @@ export class CadastroProdutosComponent implements OnInit {
 
   cadastrarProduto() {
     console.log(this.product)
-    this.produtoService.createProduct(this.product).subscribe((resp) => {
-      console.log(resp)
-    }, error => {
-      console.log(error)
-    })
+    if(this.product.product != '' && this.product.price! > 0 && this.product.max_parcelas! > 0 && this.product.description != '' && this.product.link != '') {
+      this.produtoService.createProduct(this.product).subscribe((resp) => {
+        this._snackBar.open('Produto cadastrado com sucesso', 'Fechar', {
+          horizontalPosition: this.horizontalPosition,
+          verticalPosition: this.verticalPosition,
+          duration: 5000,
+        });
+        this.product = {
+          product: '',
+          price: 0,
+          max_parcelas: 0,
+          description: '',
+          link: ''
+        }
+      }, error => {
+        console.log(error)
+      })
+    } else {
+      this._snackBar.open('Campo obrigatório não preenchido!', 'Fechar', {
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+        duration: 5000,
+      });
+    }
   }
 
 }
