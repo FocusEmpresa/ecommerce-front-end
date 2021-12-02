@@ -31,6 +31,9 @@ import { ListaProdutosComponent } from '../app/components/lista-produtos/lista-p
 import { EditarProdutoDialogComponent } from './components/editar-produto-dialog/editar-produto-dialog.component';
 import { DeleteProdutoDialogComponent } from './components/delete-produto-dialog/delete-produto-dialog.component';
 import { ListaVendasComponent } from '../app/components/lista-vendas/lista-vendas.component';
+import { DadosUsuarioComponent } from './components/dados-usuario/dados-usuario.component';
+import { AlterarUsuarioDialogComponent } from './alterar-usuario-dialog/alterar-usuario-dialog.component';
+
 
 
 
@@ -47,6 +50,8 @@ import { ListaVendasComponent } from '../app/components/lista-vendas/lista-venda
     EditarProdutoDialogComponent,
     DeleteProdutoDialogComponent,
     ListaVendasComponent,
+    DadosUsuarioComponent,
+    AlterarUsuarioDialogComponent,
   ],
   imports: [
     BrowserModule,

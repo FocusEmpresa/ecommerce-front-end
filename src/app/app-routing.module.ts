@@ -6,6 +6,8 @@ import { CarrinhoComponent } from '../app/components/carrinho/carrinho.component
 import { ListaProdutosComponent } from '../app/components/lista-produtos/lista-produtos.component';
 import { ListaVendasComponent } from '../app/components/lista-vendas/lista-vendas.component';
 import { LoginComponent } from '../app/components/login/login.component';
+import { DadosUsuarioComponent } from './components/dados-usuario/dados-usuario.component';
+
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'admin/lista-produtos', component: ListaProdutosComponent },
   { path: 'admin/lista-vendas', component: ListaVendasComponent },
   { path: 'carrinho', component: CarrinhoComponent },
+  { path: 'usuario', component: DadosUsuarioComponent },
+  
 ];
 
 @NgModule({

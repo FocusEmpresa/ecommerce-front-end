@@ -1,0 +1,63 @@
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.title {
+    display: flex;
+    padding: 20px;
+    display: flex;
+}
+.title mat-icon{
+    font-size: 30px;
+}
+
+.title h1{
+    font-weight: bold;
+    color: #6B7AC7;
+    margin-left: 15px;
+}
+
+.title h2{
+    margin-left: 15px;
+}
+
+.title button{
+    background-color: transparent;
+    border: solid 2px #6B7AC7;
+    color: #6B7AC7;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+mat-card{
+    width: 500px;
+    margin: 20px 0;
+}
+mat-card mat-card{
+    width: 440px;
+}
+
+#sexo{
+    margin-right: 20px;
+}
+
+.endereco-infos{
+    display: flex;
+    flex-direction: column;
+}
+
+.endereco-infos a{
+    cursor: pointer;
+    color: #6B7AC7;
+    text-align: end;
+}
+
+.cards button{
+    background-color: transparent;
+    border: solid 2px #6B7AC7;
+    color: #6B7AC7;
+
+}

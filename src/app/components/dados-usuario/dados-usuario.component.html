@@ -1,0 +1,57 @@
+<div class="title">
+  <mat-icon>face icon</mat-icon>
+  <h1>MEUS DADOS</h1>
+</div>
+<div class="cards">
+  <mat-card>
+    <div class="title">
+      <mat-icon>list_alt</mat-icon>
+      <h2>DADOS BASÍCOS</h2>
+      <button mat-raised-button>ALTERAR SENHA</button>
+    </div>
+    <mat-form-field style="width: 350px" appearence="fill">
+      <mat-label>Nome completo</mat-label>
+      <input matInput type="text" placeholder="Ex. Junin gamplay" value="Juninho gameplay"/>
+    </mat-form-field>
+    <mat-form-field style="width: 350px" appearence="fill">
+      <mat-label>Apelido</mat-label>
+      <input matInput type="text" placeholder="Ex. Junin" value="Juninho"/>
+    </mat-form-field>
+    <mat-form-field style="width: 350px" appearence="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="text" placeholder="Ex. junin@hotmail.com" value="junin@hotmail.com"/>
+    </mat-form-field>
+    <mat-form-field id="sexo" appearance="fill">
+      <mat-label>Sexo</mat-label>
+      <mat-select>
+        <mat-option  value="Masculino">Masculino</mat-option>
+        <mat-option value="Feminino">Feminino</mat-option>
+        <mat-option value="Nenhum">Não quero dizer</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Data de nascimento</mat-label>
+      <input matInput [matDatepicker]="picker" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <button mat-raised-button>SALVAR</button>
+  </mat-card>
+
+  <mat-card>
+    <div class="title">
+      <mat-icon>edit_location</mat-icon>
+      <h1>ENDEREÇO</h1>
+    </div>
+    <mat-card>
+      <div class="endereco-infos">
+        <p>Endereço principal</p>
+        <p>Rua da cachoeira</p>
+        <p>Numero 111, Frente</p>
+        <p>CEP 88101-010 - Florianópolis, SC</p>
+        <a (click)="openDialog()">Editar</a>
+      </div>
+    </mat-card>
+    <button style="margin-top: 20px;" mat-raised-button>SALVAR ENDEREÇO</button>
+  </mat-card>
+</div>
