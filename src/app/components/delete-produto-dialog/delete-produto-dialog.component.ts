@@ -13,12 +13,4 @@ export class DeleteProdutoDialogComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  close() {
-    this.dialogRef.close()
-  }
-
-  excluir() {
-    this.dialogRef.close()
-  }
 }

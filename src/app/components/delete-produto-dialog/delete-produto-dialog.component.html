@@ -1,8 +1,8 @@
 <div class="container">
     <h2>Deseja excluir mesmo o produto?</h2>
-    <div class="buttons">
-        <button mat-raised-button color="warn" (click)="close()">Cancelar</button>
-        <button mat-raised-button class="color-confirm" (click)="excluir()">Excluir</button>
-    </div>
+    <mat-dialog-actions align="end">
+        <button color="warn" mat-button [mat-dialog-close]="false">Cancelar</button>
+        <button class="color-confirm" mat-button [mat-dialog-close]="true" cdkFocusInitial>Confirmar</button>
+    </mat-dialog-actions>
 </div>
 

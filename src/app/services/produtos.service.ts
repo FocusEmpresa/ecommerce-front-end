@@ -17,4 +17,12 @@ export class ProdutosService {
     return this.http.post(`${environment.apiUrl}/products`, data)
   }
 
+  deleteProduct(productId: String) {
+    return this.http.delete(`${environment.apiUrl}/products/${productId}`)
+  }
+
+  updateProduct(productId: String, data: any) {
+    return this.http.put(`${environment.apiUrl}/products/${productId}`, data)
+  }
+
 }

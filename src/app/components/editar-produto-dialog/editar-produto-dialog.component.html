@@ -2,26 +2,26 @@
     <h2>Alterar produto</h2>
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Link de foto do produto</mat-label>
-        <input matInput placeholder="Ex. Pizza">
+        <input matInput [(ngModel)]="product.link" placeholder="Ex. Pizza">
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Nome do produto</mat-label>
-        <input matInput placeholder="Ex. Pizza">
+        <input matInput [(ngModel)]="product.product" placeholder="Ex. Pizza">
     </mat-form-field>
     <mat-form-field class="example-mid-width" appearance="fill">
         <mat-label>Preço do produto</mat-label>
-        <input matInput type="number" placeholder="Ex. Pizza">
+        <input matInput [(ngModel)]="product.price" type="number" placeholder="Ex. Pizza">
     </mat-form-field>
     <mat-form-field class="example-mid-width" appearance="fill">
         <mat-label>Máximo de parcelas</mat-label>
-        <input matInput type="number" placeholder="Ex. Pizza">
+        <input matInput [(ngModel)]="product.max_parcelas" type="number" placeholder="Ex. Pizza">
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Descrição do produto</mat-label>
-        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+        <textarea matInput [(ngModel)]="product.description" placeholder="Ex. It makes me feel..."></textarea>
     </mat-form-field>
-    <div class="buttons">
-        <button mat-raised-button color="warn" (click)="close()">Cancelar</button>
-        <button mat-raised-button class="color-confirm" (click)="editar()">Editar</button>
-    </div>
+    <mat-dialog-actions align="end">
+        <button color="warn" mat-button [mat-dialog-close]="false">Cancelar</button>
+        <button class="color-confirm" mat-button [mat-dialog-close]="product" cdkFocusInitial>Confirmar</button>
+    </mat-dialog-actions>
 </div>

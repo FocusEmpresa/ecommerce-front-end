@@ -33,21 +33,28 @@ export class ListaProdutosComponent implements OnInit {
 
   openDialogEdit(data: any) {
     const dialogRef = this.dialog.open(EditarProdutoDialogComponent, {
+      data: data,
       width: '600px'
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      if(result) {
+        this.produtoService.updateProduct(data._id, result).subscribe((resp) => {})
+      }
     });
   }
   
-  openDialogDelete(idProduct: string) {
+  openDialogDelete(productId: string) {
     const dialogRef = this.dialog.open(DeleteProdutoDialogComponent, {
-      width: '400px'
+      
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+    dialogRef.afterClosed().subscribe(async result => {
+      if(result) {
+        this.produtoService.deleteProduct(productId).subscribe((resp) => {
+          this.products = this.products.filter((product: { _id: string; }) => product._id !== productId)
+        })
+      }
     });
   }
 
