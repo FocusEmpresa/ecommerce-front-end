@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DeleteProdutoDialogComponent } from '../delete-produto-dialog/delete-produto-dialog.component';
+import { DeleteProdutoDialogComponent } from '../../components/delete-produto-dialog/delete-produto-dialog.component';
+import { ProductDTO } from '../../dtos/products/product.dto';
 import { EditarProdutoDialogComponent } from '../editar-produto-dialog/editar-produto-dialog.component';
+import { ProdutosService } from '../../services/produtos.service';
 
 @Component({
   selector: 'app-lista-produtos',
@@ -21,10 +23,25 @@ export class ListaProdutosComponent implements OnInit {
     {produto: 'Mouse gamer', preco: '25,00', max_parcelas: 4, descricao: 'blablabla'},
   ];
 
-  constructor(public dialog: MatDialog) { }
+  products: ProductDTO = {
+    name: ''
+  }
+
+  constructor(
+    public dialog: MatDialog,
+    private produtoService: ProdutosService
+    ) { }
 
   
   ngOnInit(): void {
+    this.findAllProducts()
+  }
+
+  async findAllProducts() {
+    await this.produtoService.getAllProducts().subscribe(resp => {
+      this.products = resp
+      console.log(this.products)
+    })
   }
 
   openDialogEdit() {

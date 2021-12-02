@@ -17,18 +17,19 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatExpansionModule} from '@angular/material/expansion';
 
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
-import { EsqueciSenhaDialogComponent } from './esqueci-senha-dialog/esqueci-senha-dialog.component';
-import { HeaderComponent } from './header/header.component';
-import { CadastroProdutosComponent } from './cadastro-produtos/cadastro-produtos.component';
-import { CarrinhoComponent } from './carrinho/carrinho.component';
-import { ListaProdutosComponent } from './lista-produtos/lista-produtos.component';
-import { EditarProdutoDialogComponent } from './editar-produto-dialog/editar-produto-dialog.component';
-import { DeleteProdutoDialogComponent } from './delete-produto-dialog/delete-produto-dialog.component';
-import { ListaVendasComponent } from './lista-vendas/lista-vendas.component';
+import { LoginComponent } from '../app/components/login/login.component';
+import { CadastroUsuarioComponent } from '../app/components/cadastro-usuario/cadastro-usuario.component';
+import { EsqueciSenhaDialogComponent } from '../app/components/esqueci-senha-dialog/esqueci-senha-dialog.component';
+import { HeaderComponent } from '../app/components/header/header.component';
+import { CadastroProdutosComponent } from './components/cadastro-produtos/cadastro-produtos.component';
+import { CarrinhoComponent } from '../app/components/carrinho/carrinho.component';
+import { ListaProdutosComponent } from '../app/components/lista-produtos/lista-produtos.component';
+import { EditarProdutoDialogComponent } from './components/editar-produto-dialog/editar-produto-dialog.component';
+import { DeleteProdutoDialogComponent } from './components/delete-produto-dialog/delete-produto-dialog.component';
+import { ListaVendasComponent } from '../app/components/lista-vendas/lista-vendas.component';
 
 
 
@@ -64,7 +65,7 @@ import { ListaVendasComponent } from './lista-vendas/lista-vendas.component';
     MatTableModule,
     MatPaginatorModule,
     MatExpansionModule,
-    
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
