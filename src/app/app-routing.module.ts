@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastrar', component: CadastroUsuarioComponent },
   { path: 'admin/cadastro-produto', component: CadastroProdutosComponent },
