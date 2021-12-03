@@ -1,9 +1,13 @@
 <mat-toolbar color="primary">
     <span>
-        <a routerLink="/login">Ecommerce</a>
+        <a routerLink="/">Ecommerce</a>
     </span>
     <span class="spacer"></span>
     <ul>
+        <li>
+            <a mat-button routerLinkActive="active-route" routerLink="/">Início</a>
+
+        </li>
         <li>
             <button mat-button [matMenuTriggerFor]="menu">Menu Administrativo</button>
             <mat-menu #menu="matMenu">

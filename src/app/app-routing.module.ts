@@ -8,9 +8,11 @@ import { ListaVendasComponent } from '../app/components/lista-vendas/lista-venda
 import { LoginComponent } from '../app/components/login/login.component';
 import { DadosUsuarioComponent } from './components/dados-usuario/dados-usuario.component';
 import { PainelUsuarioComponent } from './components/painel-usuario/painel-usuario.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastrar', component: CadastroUsuarioComponent },
   { path: 'admin/cadastro-produto', component: CadastroProdutosComponent },

@@ -1,0 +1,62 @@
+*{
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    width: 100%;
+    margin: 30px 0;
+    text-align: center;
+}
+.custom-search-bar {
+    display: flex;
+    justify-content: center;
+}
+.custom-search-bar mat-form-field {
+    width: 40%;
+    font-size: 15px;
+}
+.custom-search-bar button {
+    margin-left: 20px;
+}
+.card {
+    max-width: 200px;
+    min-width: 150px;
+    margin: 10px;
+}
+
+.promotions, .new{
+    margin: 20px auto;
+    width: 90%;
+}
+
+.session-title h1{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.flexing {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.width {
+    width: 100%;
+}
+
+.sale-ofert-before{
+    color: red;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+.sale-ofert-now{
+    font-weight: bold;
+}
+.container-button {
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}
+.container-button button {
+    width: 200px;
+}

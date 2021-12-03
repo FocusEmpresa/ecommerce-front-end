@@ -34,6 +34,7 @@ import { ListaVendasComponent } from '../app/components/lista-vendas/lista-venda
 import { DadosUsuarioComponent } from './components/dados-usuario/dados-usuario.component';
 import { AlterarUsuarioDialogComponent } from './alterar-usuario-dialog/alterar-usuario-dialog.component';
 import { PainelUsuarioComponent } from './components/painel-usuario/painel-usuario.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -54,6 +55,7 @@ import { PainelUsuarioComponent } from './components/painel-usuario/painel-usuar
     DadosUsuarioComponent,
     AlterarUsuarioDialogComponent,
     PainelUsuarioComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +78,7 @@ import { PainelUsuarioComponent } from './components/painel-usuario/painel-usuar
     HttpClientModule,
     FormsModule,
     MatSnackBarModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
