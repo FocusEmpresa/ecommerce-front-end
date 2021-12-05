@@ -32,7 +32,7 @@ import { EditarProdutoDialogComponent } from './components/editar-produto-dialog
 import { DeleteProdutoDialogComponent } from './components/delete-produto-dialog/delete-produto-dialog.component';
 import { ListaVendasComponent } from '../app/components/lista-vendas/lista-vendas.component';
 import { DadosUsuarioComponent } from './components/dados-usuario/dados-usuario.component';
-import { AlterarUsuarioDialogComponent } from './alterar-usuario-dialog/alterar-usuario-dialog.component';
+import { AlterarUsuarioDialogComponent } from '../app/components/alterar-usuario-dialog/alterar-usuario-dialog.component';
 import { PainelUsuarioComponent } from './components/painel-usuario/painel-usuario.component';
 import { HomeComponent } from './components/home/home.component';
 
