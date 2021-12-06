@@ -6,13 +6,13 @@
             <div class="inputs">
                 <mat-form-field appearance="fill">
                     <mat-label>Email</mat-label>
-                    <input matInput type="email" placeholder="teste@gmail.com">
+                    <input matInput type="email" [(ngModel)]="user.email" placeholder="teste@gmail.com">
                 </mat-form-field>
                 <mat-form-field appearance="fill">
                     <mat-label>Senha</mat-label>
-                    <input matInput type="password" placeholder="********">
+                    <input matInput type="password" [(ngModel)]="user.password" placeholder="********">
                 </mat-form-field>
-                <button mat-raised-button color="primary">Logar</button>
+                <button mat-raised-button color="primary" (click)="loginUser()">Logar</button>
                 <a (click)="openDialog()">Esqueci minha senha</a>
             </div>
         </div>
