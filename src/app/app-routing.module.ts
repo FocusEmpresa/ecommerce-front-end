@@ -9,6 +9,7 @@ import { LoginComponent } from '../app/components/login/login.component';
 import { DadosUsuarioComponent } from './components/dados-usuario/dados-usuario.component';
 import { PainelUsuarioComponent } from './components/painel-usuario/painel-usuario.component';
 import { HomeComponent } from './components/home/home.component';
+import { BuscaProdutoComponent } from './components/busca-produto/busca-produto.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'carrinho', component: CarrinhoComponent },
   { path: 'painel-usuario', component: PainelUsuarioComponent },
   { path: 'usuario', component: DadosUsuarioComponent },
+  { path: 'busca-produto', component: BuscaProdutoComponent },
 
   
 ];

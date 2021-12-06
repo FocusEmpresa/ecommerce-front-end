@@ -35,6 +35,8 @@ import { DadosUsuarioComponent } from './components/dados-usuario/dados-usuario.
 import { AlterarUsuarioDialogComponent } from '../app/components/alterar-usuario-dialog/alterar-usuario-dialog.component';
 import { PainelUsuarioComponent } from './components/painel-usuario/painel-usuario.component';
 import { HomeComponent } from './components/home/home.component';
+import { BuscaProdutoComponent } from './components/busca-produto/busca-produto.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 
 
@@ -56,6 +58,7 @@ import { HomeComponent } from './components/home/home.component';
     AlterarUsuarioDialogComponent,
     PainelUsuarioComponent,
     HomeComponent,
+    BuscaProdutoComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,6 +81,7 @@ import { HomeComponent } from './components/home/home.component';
     HttpClientModule,
     FormsModule,
     MatSnackBarModule,
+    ScrollingModule,
 
   ],
   providers: [],
