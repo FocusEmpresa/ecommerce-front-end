@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+import { AdressDTO } from 'src/app/dtos/adresses/adress.dto';
+import { AdressService } from 'src/app/services/adress.service';
 
 @Component({
   selector: 'app-alterar-usuario-dialog',
@@ -6,16 +11,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./alterar-usuario-dialog.component.css'],
 })
 export class AlterarUsuarioDialogComponent implements OnInit {
-  cep: any;
 
-  rua: String = '';
-  bairro: String = '';
-  cidade: String = '';
-  uf: String = '';
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
-  constructor() {}
+  adress:AdressDTO= {
+    cep: '',
+    identify: '',
+    road: '',
+    number: 0,
+    complement: '',
+    reference: '',
+    district: '',
+    city: '',
+    state: '',
+
+  }
+
+
+
+  constructor(public dialogRef: MatDialogRef<AlterarUsuarioDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any,private adressService: AdressService, private router: Router
+    ,private _snackBar: MatSnackBar,) {}
   onBlurMethod() {
-    this.pesquisacep(this.cep);
+    this.pesquisacep(this.adress.cep!);
   }
 
   encontrado: boolean = false;
@@ -24,11 +43,10 @@ export class AlterarUsuarioDialogComponent implements OnInit {
     fetch(conteudo)
       .then((response) => response.json())
       .then((result) => {
-        this.rua = result.logradouro;
-        this.bairro = result.bairro;
-        this.cidade = result.localidade;
-        this.uf = result.uf;
-        console.log(this.rua);
+        this.adress.road = result.logradouro;
+        this.adress.district = result.bairro;
+        this.adress.city = result.localidade;
+        this.adress.state = result.uf;
       })
       .catch((err) => {
         alert('CEP inválido!!!');
@@ -51,9 +69,9 @@ export class AlterarUsuarioDialogComponent implements OnInit {
       if (validacep.test(cep)) {
         this.encontrado = true;
         //Preenche os campos com "..." enquanto consulta webservice.
-        this.rua = '...';
-        this.bairro = '...';
-        this.cidade = '...';
+        this.adress.road = '...';
+        this.adress.district = '...';
+        this.adress.city = '...';
 
         //Sincroniza com o callback.
         const url = 'https://viacep.com.br/ws/' + cep + '/json/';
@@ -67,4 +85,32 @@ export class AlterarUsuarioDialogComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+close(){
+  this.dialogRef.close();
 }
+
+  async createAdress() {
+   
+    if(this.adress.cep && this.adress.city && this.adress.complement && this.adress.district &&
+      this.adress.identify &&this.adress.number && this.adress.reference &&
+      this.adress.road &&this.adress.state){
+    this._snackBar.open('Endereço cadastrado com sucesso', 'Fechar', {
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+      duration: 5000,
+    });
+    this.adressService.createAdress(this.adress).subscribe((resp) => {
+      console.log('Endereço criado!')
+    })
+  } else {
+    this._snackBar.open('Endereço não foi cadastrado! Todos campos devem ser preenchidos', 'Fechar', {
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+      duration: 5000,
+    });
+    return;
+  }
+    this.dialogRef.close();
+  }
+}
+

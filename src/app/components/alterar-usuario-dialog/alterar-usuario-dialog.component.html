@@ -1,36 +1,39 @@
 <mat-form-field style="width: 350px;" appearence="fill">
     <mat-label>CEP</mat-label>
-    <input matInput type="text"  name="cep" id="cep" placeholder="CEP" [(ngModel)]="cep" (blur)="onBlurMethod()" maxlength="8" minlength="8" placeholder="Ex. 55132-123">
+    <input matInput type="text"  name="cep" id="cep" placeholder="CEP" [(ngModel)]="adress.cep" (blur)="onBlurMethod()" maxlength="8" minlength="8" placeholder="Ex. 55132-123">
   </mat-form-field>
   <mat-form-field style="width: 350px;" appearence="fill">
     <mat-label>Identificação</mat-label>
-    <input matInput type="text" placeholder="Ex. Endereço principal">
+    <input matInput type="text" [(ngModel)]="adress.identify" placeholder="Ex. Endereço principal">
   </mat-form-field>
   <mat-form-field style="width: 350px;" appearence="fill">
     <mat-label>Logradouro</mat-label>
-    <input value="{{rua}}" id="rua" matInput type="text" placeholder="Ex. Rua das flores">
+    <input [(ngModel)]="adress.road" id="rua" matInput type="text" placeholder="Ex. Rua das flores">
   </mat-form-field>
   <mat-form-field style="width: 350px;" appearence="fill">
     <mat-label>Numero</mat-label>
-    <input matInput type="text" placeholder="Ex. 221">
+    <input [(ngModel)]="adress.number" matInput type="text" placeholder="Ex. 221">
   </mat-form-field><mat-form-field style="width: 350px;" appearence="fill">
     <mat-label>Complemento</mat-label>
-    <input matInput type="text" placeholder="Ex. Frente">
+    <input [(ngModel)]="adress.complement" matInput type="text" placeholder="Ex. Frente">
   </mat-form-field>
   <mat-form-field style="width: 350px;" appearence="fill">
     <mat-label>Referencia</mat-label>
-    <input matInput type="text" placeholder="Ex. Passando a ponte">
+    <input [(ngModel)]="adress.reference" matInput type="text" placeholder="Ex. Passando a ponte">
   </mat-form-field>
   <mat-form-field style="width: 350px;" appearence="fill">
     <mat-label>Bairro</mat-label>
-    <input value="{{bairro}}" id="bairro" matInput type="text" placeholder="Ex. Irineu">
+    <input [(ngModel)]="adress.district" id="bairro" matInput type="text" placeholder="Ex. Irineu">
   </mat-form-field> 
   <mat-form-field style="width: 350px;" appearence="fill">
     <mat-label>Cidade</mat-label>
-    <input value="{{cidade}}" id="cidade" matInput type="text" placeholder="Ex. Florianópolis">
+    <input [(ngModel)]="adress.city" id="cidade" matInput type="text" placeholder="Ex. Florianópolis">
   </mat-form-field>
   <mat-form-field style="width: 350px;" appearence="fill">
     <mat-label>UF</mat-label>
-    <input value="{{uf}}" matInput type="text" placeholder="Ex. SC">
+    <input [(ngModel)]="adress.state" matInput type="text" placeholder="Ex. SC">
   </mat-form-field>
-  <button mat-raised-button>SALVAR</button>
+  <div class="buttons">
+  <a (click)="close()" id="cancel">Cancelar</a>
+  <button id="save" (click)="createAdress()" mat-raised-button>SALVAR</button>
+</div>

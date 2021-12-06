@@ -1,3 +1,21 @@
 button {
     margin: auto;
 }
+
+#cancel {
+    color: red;
+    background: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#save{ 
+    margin-left: 20px;
+    background-color: rgb(24, 192, 33);
+    border: solid 2px green;
+    color: white; 
+}
+
+.buttons {
+    float: right;
+}
