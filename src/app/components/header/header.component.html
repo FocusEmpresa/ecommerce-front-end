@@ -7,7 +7,7 @@
         <li>
             <a mat-button routerLinkActive="active-route" routerLink="/home">Início</a>
         </li>
-        <li>
+        <li *ngIf="admin && logged">
             <button mat-button [matMenuTriggerFor]="menu">Menu Administrativo</button>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item routerLinkActive="active-route" routerLink="/admin/cadastro-produto"><mat-icon>add_circle</mat-icon> Adicionar Produto</button>
@@ -22,13 +22,16 @@
             </button>
         </li>
         
-        <li>
+        <li *ngIf="logged">
             <button mat-icon-button routerLinkActive="active-route" routerLink="/painel-usuario">
                 <mat-icon>account_circle</mat-icon>
             </button>
         </li>
-        <li>
+        <li *ngIf="!logged">
             <a mat-button routerLinkActive="active-route" routerLink="/login">Login</a>/<a mat-button routerLinkActive="active-route" routerLink="/cadastrar">Cadastrar</a>
+        </li>
+        <li *ngIf="logged">
+            <a mat-button (click)="loggout()">Logout</a>
         </li>
     </ul>
 </mat-toolbar>

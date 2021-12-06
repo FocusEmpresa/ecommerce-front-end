@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-vendas',
@@ -19,9 +20,16 @@ export class ListaVendasComponent implements OnInit {
     {produto: 'Mouse gamer', preco: '25,00', max_parcelas: 4, descricao: 'blablabla'},
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    const userData = JSON.parse(localStorage.getItem('user')!)
+    if(!userData) {
+      this.router.navigateByUrl('/')
+    }
+    if(userData.typeAccess != 'ADMIN'){
+      this.router.navigateByUrl('/')
+    }
   }
 
 }

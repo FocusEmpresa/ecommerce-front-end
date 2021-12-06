@@ -6,4 +6,5 @@ export interface UserDTO {
     password?: string;
     sex?: string;
     birthday?: string;
+    typeAccess?: string;
 }

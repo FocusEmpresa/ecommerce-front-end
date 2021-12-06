@@ -17,4 +17,8 @@ export class UserService {
     return this.http.post(`${environment.apiUrl}/user/login`, data)
   }
 
+  getUserLogged(email: string) {
+    return this.http.get(`${environment.apiUrl}/user/getUser/${email}`)
+  }
+
 }

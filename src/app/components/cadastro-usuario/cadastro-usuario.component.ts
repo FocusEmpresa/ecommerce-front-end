@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { UserDTO } from 'src/app/dtos/user/user.dto';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-usuario',
@@ -18,10 +19,12 @@ export class CadastroUsuarioComponent implements OnInit {
     birthday: ''
   }
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
-
+    if(localStorage.getItem('user')){
+      this.router.navigateByUrl('/')
+    }
   }
 
   async createUser() {

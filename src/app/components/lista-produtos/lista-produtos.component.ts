@@ -4,6 +4,7 @@ import { DeleteProdutoDialogComponent } from '../../components/delete-produto-di
 import { ProductDTO } from '../../dtos/products/product.dto';
 import { EditarProdutoDialogComponent } from '../editar-produto-dialog/editar-produto-dialog.component';
 import { ProdutosService } from '../../services/produtos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-produtos',
@@ -17,11 +18,19 @@ export class ListaProdutosComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
-    private produtoService: ProdutosService
+    private produtoService: ProdutosService,
+    private router: Router
     ) { }
 
   
   ngOnInit(): void {
+    const userData = JSON.parse(localStorage.getItem('user')!)
+    if(!userData) {
+      this.router.navigateByUrl('/')
+    }
+    if(userData.typeAccess != 'ADMIN'){
+      this.router.navigateByUrl('/')
+    }
     this.findAllProducts()
   }
 

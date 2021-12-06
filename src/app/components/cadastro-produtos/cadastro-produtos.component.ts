@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ProductDTO } from 'src/app/dtos/products/product.dto';
 import { ProdutosService } from 'src/app/services/produtos.service';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-produtos',
@@ -24,9 +25,17 @@ export class CadastroProdutosComponent implements OnInit {
   constructor(
     private produtoService: ProdutosService,
     private _snackBar: MatSnackBar,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
+    const userData = JSON.parse(localStorage.getItem('user')!)
+    if(!userData) {
+      this.router.navigateByUrl('/')
+    }
+    if(userData.typeAccess != 'ADMIN'){
+      this.router.navigateByUrl('/')
+    }
   }
 
   cadastrarProduto() {

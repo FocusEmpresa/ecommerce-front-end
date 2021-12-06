@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 export interface PeriodicElement {
   name: string;
@@ -21,9 +22,12 @@ export class PainelUsuarioComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'status', 'data', 'pagamento'];
   dataSource = ELEMENT_DATA;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    if(!localStorage.getItem('user')){
+      this.router.navigateByUrl('/login')
+    }
   }
 
 }
