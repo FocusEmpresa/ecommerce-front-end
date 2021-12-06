@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { AlterarUsuarioDialogComponent } from 'src/app/alterar-usuario-dialog/alterar-usuario-dialog.component';
+import { AlterarUsuarioDialogComponent } from '../alterar-usuario-dialog/alterar-usuario-dialog.component';
 
 @Component({
   selector: 'app-dados-usuario',
