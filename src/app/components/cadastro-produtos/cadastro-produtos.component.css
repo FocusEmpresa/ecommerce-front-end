@@ -29,3 +29,13 @@ mat-form-field, button {
     color: rgba(255, 255, 255, 0.815);
     background: #19be26;
 }
+
+.group-items mat-form-field {
+    width: 32%;
+}
+
+.group-items{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

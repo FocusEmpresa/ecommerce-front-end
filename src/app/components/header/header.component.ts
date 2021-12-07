@@ -1,4 +1,5 @@
 import { Component, DoCheck, OnChanges, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ export class HeaderComponent implements OnInit, DoCheck {
   logged: boolean = false;
   admin: boolean = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +22,8 @@ export class HeaderComponent implements OnInit, DoCheck {
       this.logged = true;
       if(dataUser.typeAccess == 'ADMIN') {
         this.admin = true
+      } else {
+        this.admin = false
       }
     } else {
       this.logged = false;
@@ -29,6 +32,7 @@ export class HeaderComponent implements OnInit, DoCheck {
 
   loggout() {
     localStorage.clear()
+    this.router.navigateByUrl('/home')
   }
 
 }

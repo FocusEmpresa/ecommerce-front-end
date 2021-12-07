@@ -19,7 +19,9 @@ export class CadastroProdutosComponent implements OnInit {
     price: 0,
     max_parcelas: 0,
     description: '',
-    link: ''
+    link: '',
+    type: '',
+    category: ''
   }
 
   constructor(
@@ -40,7 +42,7 @@ export class CadastroProdutosComponent implements OnInit {
 
   cadastrarProduto() {
     console.log(this.product)
-    if(this.product.product != '' && this.product.price! > 0 && this.product.max_parcelas! > 0 && this.product.description != '' && this.product.link != '') {
+    if(this.product.product != '' && this.product.price! > 0 && this.product.max_parcelas! > 0 && this.product.description != '' && this.product.link != '' && this.product.type != '') {
       this.produtoService.createProduct(this.product).subscribe((resp) => {
         this._snackBar.open('Produto cadastrado com sucesso', 'Fechar', {
           horizontalPosition: this.horizontalPosition,

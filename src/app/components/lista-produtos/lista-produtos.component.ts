@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class ListaProdutosComponent implements OnInit {
 
-  displayedColumns: string[] = ['Produto', 'Preço', 'Max_parcelas', 'Ações'];
+  displayedColumns: string[] = ['Produto', 'Preço', 'Max_parcelas', 'Tipo', 'Ações'];
   products: ProductDTO[] | any;
 
   constructor(

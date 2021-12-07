@@ -5,4 +5,6 @@ export interface ProductDTO {
     max_parcelas?: number;
     description?: string;
     link?: string;
+    type?: string;
+    category?: string
 }

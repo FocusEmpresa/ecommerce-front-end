@@ -16,6 +16,22 @@
         <mat-label>Máximo de parcelas</mat-label>
         <input matInput [(ngModel)]="product.max_parcelas" type="number" placeholder="Ex. Pizza">
     </mat-form-field>
+    <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>Tipo de produto</mat-label>
+        <mat-select [(ngModel)]="product.type">
+            <mat-option value="NORMAL">Normal</mat-option>
+            <mat-option value="NOVO">Novo</mat-option>
+            <mat-option value="PROMOÇÃO">Promoção</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <!-- <mat-form-field appearance="fill" class="example-mid-width">
+        <mat-label>Tipo de produto</mat-label>
+        <mat-select >
+            <mat-option value="NORMAL">Normal</mat-option>
+            <mat-option value="NOVO">Novo</mat-option>
+            <mat-option value="PROMOCAO">Promoção</mat-option>
+        </mat-select>
+    </mat-form-field> -->
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Descrição do produto</mat-label>
         <textarea matInput [(ngModel)]="product.description" placeholder="Ex. It makes me feel..."></textarea>

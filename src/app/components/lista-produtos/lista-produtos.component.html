@@ -19,6 +19,11 @@
             <td mat-cell *matCellDef="let row">{{row.max_parcelas}} </td>
         </ng-container>
 
+        <ng-container matColumnDef="Tipo">
+            <th mat-header-cell *matHeaderCellDef> Tipo </th>
+            <td mat-cell *matCellDef="let row">{{row.type}} </td>
+        </ng-container>
+
         <ng-container matColumnDef="Ações">
             <th class="flex-end" mat-header-cell *matHeaderCellDef> Ações </th>
             <td class="flex-end" mat-cell *matCellDef="let row">

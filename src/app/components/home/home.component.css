@@ -23,7 +23,10 @@
     min-width: 250px;
     margin: 10px;
 }
-
+.card button{
+    display: flex;
+    justify-content: baseline;
+}
 .promotions, .new, .all{
     margin: 20px auto;
     width: 90%;
@@ -51,6 +54,7 @@
 }
 .sale-ofert-now{
     font-weight: bold;
+    margin-top: -10px;
 }
 .container-button {
     width: 100%;
