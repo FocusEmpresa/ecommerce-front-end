@@ -19,12 +19,15 @@ export class DadosUsuarioComponent implements OnInit {
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(AlterarUsuarioDialogComponent, {
-      width: '400px'
+      width: '400px',
+      disableClose: true
     });
+
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
   }
+
 
 }
